@@ -22,17 +22,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/samsung/dreamlte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common RR stuff.
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := dreamlte
-PRODUCT_NAME := lineage_dreamlte
+PRODUCT_NAME := rr_dreamlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G950F
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_SHIPPING_API_LEVEL := 29
+ANDROID_MAJOR_VERSION := 10
 
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
